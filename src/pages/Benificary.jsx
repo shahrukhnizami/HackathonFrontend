@@ -37,7 +37,7 @@ export default function Beneficiary() {
   useEffect(() => {
     const fetchBeneficiaries = async () => {
       try {
-        const response = await axios.get('http://localhost:4040/api/beneficiary');
+        const response = await axios.get('https://hackathon-frontend-liart.vercel.app/api/beneficiary');
         setBeneficiaries(response.data); // Set the data from the API into the state
         setLoading(false); // Set loading to false once data is fetched
       } catch (error) {
