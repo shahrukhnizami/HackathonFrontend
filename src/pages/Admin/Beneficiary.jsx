@@ -64,7 +64,7 @@ const openDeleteDialog = (user) => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get('http://localhost:4040/api/auth/users', {
+      const response = await axios.get('https://hackathon-backend-mu-pearl.vercel.app/api/auth/users', {
       // const response = await axios.get('https://backend-rms.vercel.app/api/auth/users', {
         headers: { Authorization: `Bearer ${user.token}` },
       });
