@@ -64,7 +64,7 @@ const openDeleteDialog = (user) => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get('http://localhost:4040/api/auth/users', {
+      const response = await axios.get('https://hackathon-backend-mu-pearl.vercel.app/api/auth/users', {
       // const response = await axios.get('https://hackathon-backend-mu-pearl.vercel.app/api/auth/users', {
         headers: { Authorization: `Bearer ${user.token}` },
       });
@@ -86,7 +86,7 @@ const openDeleteDialog = (user) => {
     console.log('User ID to delete:', userId); // Debugging
     try {
       // const response = await axios.delete(`https://backend-rms.vercel.app/api/auth/users/${userId}`, {
-      const response = await axios.delete(`http://localhost:4040/api/auth/users/${userId}`, {
+      const response = await axios.delete(`https://hackathon-backend-mu-pearl.vercel.app/api/auth/users/${userId}`, {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       setSnackbar({ open: true, message: response.data.message, severity: 'success' });
